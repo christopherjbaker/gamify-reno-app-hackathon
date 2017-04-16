@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import Layout from './layout/layout';
 import Subpages from 'app-components/subpages/subpages';
 
-import Landing from './pages/landing/landing';
-import Objectives from './pages/objectives/objectives';
-import Accomplishments from './pages/accomplishments/accomplishments';
 import Community from './pages/community/community';
+import Landing from './pages/landing/landing';
 import Accomplishment from './pages/Accomplishment/Accomplishment';
-import Users from './pages/users/users';
+import Accomplishments from './pages/accomplishments/accomplishments';
+import Objective from './pages/objective/objective';
+import Objectives from './pages/objectives/objectives';
 import User from './pages/user/user';
+import Users from './pages/users/users';
 
 export default class App extends Component {
 	render() {
@@ -22,20 +22,21 @@ export default class App extends Component {
 						{ label: 'About 2', to: '/about/2' },
 					] },
 					{ label: 'Objectives', to: '/objectives' },
-                    { label: 'Accomplishments', to: '/accomplishments' },
-                    { label: 'Community', to: '/community' },
-                    { label: 'Users', to: '/users' },
-                    
+					{ label: 'Accomplishments', to: '/accomplishments' },
+					{ label: 'Community', to: '/community' },
+					{ label: 'Users', to: '/users' },
+
 				]}
 			>
 				<Subpages index="/landing" routes={[
 					{ route: 'landing', Component: Landing },
+					{ route: 'community', Component: Community },
+					{ route: 'accomplishments', Component: Accomplishments },
+					{ route: 'accomplishments/:id', Component: Accomplishment },
 					{ route: 'objectives', Component: Objectives },
-                    { route: 'accomplishments', Component: Accomplishments},
-                    { route: 'community', Component: Community},
-                    { route: 'accomplishment', Component: Accomplishment},
-                    { route: 'users', Component: Users},
-                    { route: 'user', Component: User},
+					{ route: 'objectives/:id', Component: Objective },
+					{ route: 'users', Component: Users },
+					{ route: 'users/:id', Component: User },
 				]} />
 			</Layout>
 		);

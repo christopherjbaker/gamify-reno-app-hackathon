@@ -5,7 +5,7 @@ export default class User extends Component {
 	render() {
 		return (
 			<Page title="User">
-				
+
 			</Page>
 		);
 	}
