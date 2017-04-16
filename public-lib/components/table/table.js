@@ -5,6 +5,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class Table extends Component {
+	static contextTypes = {
+		router: React.PropTypes.shape({
+			history: React.PropTypes.shape({
+				push: React.PropTypes.func.isRequired,
+			}).isRequired,
+		}).isRequired,
+	};
+
 	static propTypes = {
 		headers: React.PropTypes.arrayOf(React.PropTypes.shape({
 			label: React.PropTypes.string.isRequired,
@@ -30,15 +38,17 @@ export default class Table extends Component {
 					</thead>
 					<tbody>
 						{ this.props.data.map((data) =>
-							<tr key={ data.id }>
+							<tr
+								key={ data.id }
+								onClick={ this.props.route
+									? () => this.context.router.history.push(
+										this.props.route(data)
+									)
+									: null
+								}
+							>
 								{ this.props.headers.map(({ key }) =>
-									<td key={ key }>
-										{ this.props.route ? (
-											<Link to={ this.props.route(data)}>{ data[key] }</Link>
-										) : (
-											data[key]
-										) }
-									</td>
+									<td key={ key }>{ data[key] }</td>
 								) }
 							</tr>
 						) }

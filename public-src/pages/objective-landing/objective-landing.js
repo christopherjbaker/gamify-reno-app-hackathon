@@ -32,12 +32,13 @@ export default class ObjectiveLanding extends Component {
 								{ this.state.nearby ? (
 									<Table
 										className={ styles.nearby }
-										title="Nearby Tasks"
+										title="Nearby Objectives"
 										headers={[
 											{ label: 'Title', key: 'title' },
 											{ label: 'Points', key: 'points' },
 										]}
 										data={ this.state.nearby }
+										route={ ({ id }) => `/objective/${id}` }
 									/>
 								) : null }
 

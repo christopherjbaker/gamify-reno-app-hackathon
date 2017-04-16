@@ -26,26 +26,26 @@ export default class Button extends Component {
 		className: React.PropTypes.string,
 		children: React.PropTypes.node,
 	};
-	
+
 	static defaultProps = {
 		variant: 'primary',
 		visible: true,
 	};
-	
+
 	render() {
 		let { children, className, variant, visible, ...props } = this.props;
-		variant = (Array.isArray(variant) ? variant : [ variant ]).filter(v => v);
-		
+		variant = (Array.isArray(variant) ? variant : [ variant ]).filter(v => v).map(v => `btn-${ v }`);
+
 		if (!visible) {
 			return null;
 		}
-		
+
 		if (variant.includes('disabled')) {
 			delete props.to;
 			delete props.href;
 			delete props.onClick;
 		}
-		
+
 		let Tag = 'button';
 		if (props.to) {
 			Tag = Link;
@@ -53,9 +53,9 @@ export default class Button extends Component {
 		if (props.href) {
 			Tag = 'a';
 		}
-		
+
 		return (
-			<Tag className={ classes('button', styles.main, className, ...variant) } { ...props }>
+			<Tag className={ classes('btn', styles.main, className, ...variant) } { ...props }>
 				{ children }
 			</Tag>
 		);
