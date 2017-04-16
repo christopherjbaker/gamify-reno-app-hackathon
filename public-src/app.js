@@ -18,10 +18,6 @@ export default class App extends Component {
 			<Layout
 				navigation={[
 					{ label: 'Home', to: '/landing' },
-					{ label: 'About', to: '/about', children: [
-						{ label: 'About 1', to: '/about/1' },
-						{ label: 'About 2', to: '/about/2' },
-					] },
 					{ label: 'Objectives', to: '/objectives' },
 					{ label: 'Accomplishments', to: '/accomplishments' },
 					{ label: 'Community', to: '/community' },
