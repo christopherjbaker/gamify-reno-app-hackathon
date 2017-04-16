@@ -36,7 +36,24 @@ export default class Objectives extends Component {
 						<div className="row">
 							<div className="col-md-12 col-sm-12 col-xs-12">
 								<Category
+									color='red'
 									title='Performance'
+								/>
+								<Category
+									color='blue'
+									title='Travel'
+								/>
+								<Category
+									color='brown'
+									title='Create'
+								/>
+								<Category
+									color='purple'
+									title='Good Samaritan'
+								/>
+								<Category
+									color='black'
+									title='Commerce'
 								/>
 							</div>
 						</div>
