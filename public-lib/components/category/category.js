@@ -10,26 +10,20 @@ export default class Category extends Component {
 	};
 	render() {
 		return (
-			<section className={classes(styles.main, 'pricing pricing-three')}>
+			<section className={classes(styles.main, this.props.color, 'pricing pricing-three')}>
 				<div>
 					<div className="container">
 						<div className="pricing-items">
 							<div className="row">
 								<div className="col-md-12 col-sm-12 col-xs-12">
-									<div className="pricing-item fourth">
+									<div className="pricing-item">
 										<div className="pricing-header">
-											<h3 className="name">PREMIUM</h3>
-											<h2 className="amount">{ this.props.title }</h2>
-											<a href="#">ticket now</a>
+											<h2 className={classes(styles.amount, 'amount')}>{ this.props.title }</h2>
 										</div>
-										<div className="pricing-options">
+										<div className={classes(styles.options, 'pricing-options')}>
 											<div>
-												<p>Conference Tickets<span><i className="fa fa-check" aria-hidden="true" /></span></p>
-												<p>Free Lunch And Coffee<span><i className="fa fa-check" aria-hidden="true" /></span></p>
-												<p>Easy Access<span><i className="fa fa-check" aria-hidden="true" /></span></p>
-												<p>Certificate<span><i className="fa fa-check" aria-hidden="true" /></span></p>
-												<p>Printed Metarials<span><i className="fa fa-check" aria-hidden="true" /></span></p>
-												<p>More Options<span><i className="fa fa-check" aria-hidden="true" /></span></p>
+												<p>Available Points<span className={ styles.data }>150</span></p>
+												<p>Available Objectives<span className={ styles.data }>25</span></p>
 											</div>
 										</div>
 										<div className="pricing-button">

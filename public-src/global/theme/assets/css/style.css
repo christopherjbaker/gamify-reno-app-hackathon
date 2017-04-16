@@ -2393,7 +2393,6 @@ header .menu-six .menu_cart > span:before{
     background-color: #65ac4c;
 }
 .pricing .pricing-item .pricing-header{
-    overflow: hidden;
     padding: 36px 30px;
 }
 .pricing .pricing-item .pricing-header .name{
@@ -2532,7 +2531,7 @@ header .menu-six .menu_cart > span:before{
 .pricing-three .pricing-item .pricing-header .amount{
     display: block;
     float: initial;
-    font-size: 72px;
+    font-size: 5rem;
     line-height: 2.34;
     text-align: center;
 }
@@ -2549,12 +2548,14 @@ header .menu-six .menu_cart > span:before{
 
 }
 .pricing-three .pricing-item .pricing-options{
-    width: 63%;
-    float: left;
-    border: 10px solid #fafafa;
+    width: 40%;
+    float: right;
     border-left: none;
     padding: 0px;
     position: relative;
+    top: 50%;
+    transform: translateY(50%);
+    margin-right: 4rem;
 }
 .pricing-three .pricing-item .pricing-options > div{
     border: 1px solid #f0f0f0;
@@ -2567,7 +2568,6 @@ header .menu-six .menu_cart > span:before{
     left: 0;
     width: 40px;
     height: 10px;
-    background-color: #65ac4c;
 }
 .pricing-three .pricing-item .pricing-options:after{
     content: "";
@@ -2576,7 +2576,6 @@ header .menu-six .menu_cart > span:before{
     left: 0;
     width: 40px;
     height: 10px;
-    background-color: #65ac4c;
 }
 .pricing-three .pricing-item.second .pricing-options:before, .pricing-three .pricing-item.second .pricing-options:after{
     background-color: #ff9822;
