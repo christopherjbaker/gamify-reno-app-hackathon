@@ -1,4 +1,5 @@
 import qs from 'querystring';
+import fetch from './_mock_fetch';
 
 const uri = 'https://gamifyreno.azurewebsites.net';
 
@@ -72,13 +73,13 @@ export default class API {
 			return null;
 		}
 
-		let result = this.request('GET', 'ById', { id });
+		let result = await this.request('GET', 'ById', { id });
 
 		return new this(result);
 	}
 
 	static async search(path, query) {
-		let results = this.request('GET', path, query);
+		let results = await this.request('GET', path, query);
 
 		return results.map(result => new this(result));
 	}

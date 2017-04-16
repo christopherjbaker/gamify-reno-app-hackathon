@@ -5,7 +5,7 @@ export default class Objective extends API {
 	static _cache = {};
 
 	get id() {
-		return this._data.id;
+		return this._data.objectiveID;
 	}
 
 	get title() {

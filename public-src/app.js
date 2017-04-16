@@ -31,11 +31,11 @@ export default class App extends Component {
 				<Subpages index="/landing" routes={[
 					{ route: 'landing', Component: Landing },
 					{ route: 'community', Component: Community },
-					{ route: 'accomplishments', Component: Accomplishments },
+					{ route: 'accomplishments', Component: Accomplishments, exact: true },
 					{ route: 'accomplishments/:id', Component: Accomplishment },
-					{ route: 'objectives', Component: Objectives },
+					{ route: 'objectives', Component: Objectives, exact: true },
 					{ route: 'objectives/:id', Component: Objective },
-					{ route: 'users', Component: Users },
+					{ route: 'users', Component: Users, exact: true },
 					{ route: 'users/:id', Component: User },
 				]} />
 			</Layout>
