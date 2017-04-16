@@ -1,0 +1,17 @@
+.main {
+	background-image: none !important;
+	
+	.title {
+		text-align: center;
+		text-transform: uppercase;
+		color: white;
+		font-size: 2rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	.stats {
+		background-color: black;
+		color: white;
+	}
+}

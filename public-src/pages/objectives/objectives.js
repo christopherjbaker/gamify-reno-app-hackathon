@@ -2,6 +2,7 @@ import styles from './objectives.scss';
 
 import React, { Component } from 'react';
 import Page from 'app-components/page/page';
+import Category from 'app-components/category/category';
 import Table from 'app-components/table/table';
 
 export default class Objectives extends Component {
@@ -34,32 +35,9 @@ export default class Objectives extends Component {
 					<div className="container">
 						<div className="row">
 							<div className="col-md-12 col-sm-12 col-xs-12">
-								<div className="image">
-									<div className="left">
-										<img src="images/about/about_02.jpg" alt="about iamge" className="img-responsive" />
-									</div>
-									<div className="right">
-										<div className="top"><img src="images/about/about_03.jpg" alt="about iamge" className="img-responsive" /></div>
-										<div className="bottom"><img src="images/about/about_04.jpg" alt="about iamge" className="img-responsive" /></div>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-6 col-sm-12 col-xs-12">
-								<div className="content">
-									<div className="section-header">
-										<h2>About the Conference 2017</h2>
-										<p><em>Creative Thinking for Event Conference</em></p>
-									</div>
-									<p>Phoslorescently ntiate principle-centered networks via magnetc services an
-										fulys tested metrics without freprof web services enabled experences bricks
-										Rapidiously evisculate standards compliant web services are afor errorfree
-										Rapidiously evisculate standards compliant fullys tested metrics withoutan
-										fullys tested metrics without futureproof web services</p>
-									<ul className="about-button">
-										<li><a href="#" className="default-button">read more</a></li>
-										<li><a href="#" className="default-button">buy ticket</a></li>
-									</ul>
-								</div>
+								<Category
+									title='Performance'
+								/>
 							</div>
 						</div>
 					</div>
