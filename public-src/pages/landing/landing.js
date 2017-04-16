@@ -2,7 +2,6 @@ import styles from './landing.scss';
 import API from 'app-api/objective';
 
 import React, { Component } from 'react';
-import Category from 'app-components/category/category';
 import Table from 'app-components/table/table';
 import Page from 'app-components/page/page';
 import BigNumber from 'app-components/big-number/big-number';
@@ -85,6 +84,7 @@ export default class Landing extends Component {
 													{ label: 'Points', key: 'points' },
 												]}
 												data={ this.state.nearby }
+												route={ ({ id }) => `/objective/${id}` }
 											/>
 										) : null }
 									</div>

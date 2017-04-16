@@ -43,7 +43,13 @@ export default class Layout extends Component {
 								<span className="icon-bar"></span>
 								<span className="icon-bar"></span>
 							</button>
-							<Link className="navbar-brand" to="/"><img src={ require('./assets/images/logo.png') } alt="logo" className="img-responsive" /></Link>
+							<Link className="navbar-brand" to="/">
+								<img
+									src={ require('./assets/images/logo.png') }
+									alt="logo"
+									className={ classes('img-responsive', styles.logo) }
+								/>
+							</Link>
 						</div>
 						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul className="nav navbar-nav navbar-right">
