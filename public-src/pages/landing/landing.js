@@ -54,12 +54,11 @@ export default class Landing extends Component {
 															<div className="col-md-12 col-sm-12 col-xs-12">
 																<div className="pricing-item">
 																	<div className="pricing-header">
-																		<h2 className= 'amount'>Title</h2>
+																		<h2 className='amount' style={{ fontSize: '4rem' }}>Task of the Day</h2>
 																	</div>
-																	<div className='pricing-options'>
+																	<div className='pricing-options' style={{ transform: 'translateY(100%)' }}>
 																		<div>
-																			<p>Available Points<span>150</span></p>
-																			<p>Available Objectives<span>25</span></p>
+																			<p>Available Points<span style={{ backgroundColor: 'white', color: 'black', fontSize: '2rem', marginRight: '10rem', textAlign: 'left' }}>150</span></p>
 																		</div>
 																	</div>
 																	<div className="pricing-button">
