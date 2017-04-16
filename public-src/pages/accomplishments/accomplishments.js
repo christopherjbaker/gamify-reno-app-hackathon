@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Page from 'app-components/page/page';
 
-export default class Landing extends Component {
+export default class Accomplishments extends Component {
 	render() {
 		return (
-			<Page>
+			<Page title="Accomplishments">
 				<section className="banner banner-seven">
 					<div className="banner-overlay">
 						<div className="container">

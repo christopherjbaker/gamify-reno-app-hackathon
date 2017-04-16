@@ -6,10 +6,10 @@ import Category from 'app-components/category/category';
 import Page from 'app-components/page/page';
 import Table from 'app-components/table/table';
 
-export default class Landing extends Component {
+export default class Objectives extends Component {
 	render() {
 		return (
-			<Page className={ styles.main }>
+			<Page className={ styles.main } title="Objectives">
 				<section className="banner-three">
 					<div className="banner-overlay">
 						<div className="container">
