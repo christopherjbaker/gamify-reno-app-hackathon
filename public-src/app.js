@@ -24,7 +24,6 @@ export default class App extends Component {
 					{ label: 'Objectives', to: '/objectives' },
                     { label: 'Accomplishments', to: '/accomplishments' },
                     { label: 'Community', to: '/community' },
-                
                     { label: 'Users', to: '/users' },
                     
 				]}
