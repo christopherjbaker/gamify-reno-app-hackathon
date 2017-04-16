@@ -7,7 +7,6 @@ import Landing from './pages/landing/landing';
 import Objectives from './pages/objectives/objectives';
 import Accomplishments from './pages/accomplishments/accomplishments';
 
-
 export default class App extends Component {
 	render() {
 		return (

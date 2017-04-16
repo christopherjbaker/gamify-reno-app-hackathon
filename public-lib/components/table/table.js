@@ -3,6 +3,15 @@ import classes from 'app-utils/classes';
 import React, { Component } from 'react';
 
 export default class Table extends Component {
+	static propTypes = {
+		headers: React.PropTypes.arrayOf(React.PropTypes.shape({
+			label: React.PropTypes.string.isRequired,
+			key: React.PropTypes.string.isRequired,
+		})).isRequired,
+		data: React.PropTypes.object,
+		className: React.PropTypes.string,
+	};
+	
 	render() {
 		return (
 			<div className="tab-content">
@@ -11,10 +20,9 @@ export default class Table extends Component {
 						<table>
 							<thead>
 								<tr>
-									<th className="time">Day</th>
-									<th className="session">Session</th>
-									<th className="spekers">Spekers</th>
-									<th className="venue">Venue</th>
+									{ this.props.headers.map(({ label, key }) =>
+										<th key={ key }>{ label }</th>
+									) }
 								</tr>
 							</thead>
 							<tbody>
