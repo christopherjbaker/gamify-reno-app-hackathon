@@ -12,7 +12,7 @@ export default class User extends API {
 		return this._data.userPicture;
 	}
 
-	get rating() {
+	get points() {
 		return this._data.userRating;
 	}
 
@@ -20,7 +20,7 @@ export default class User extends API {
 		return {
 			id: this.id,
 			avatar: this.avatar,
-			rating: this.rating,
+			points: this.points,
 		};
 	}
 }

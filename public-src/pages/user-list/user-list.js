@@ -2,6 +2,7 @@ import API from 'app-api/user';
 
 import React, { Component } from 'react';
 import Page from 'app-components/page/page';
+import Table from 'app-components/table/table';
 
 export default class UserList extends Component {
 	constructor() {
@@ -27,7 +28,22 @@ export default class UserList extends Component {
 
 		return (
 			<Page title="Users">
-				<pre>{ JSON.stringify(this.state.data, null, 4) }</pre>
+				<section className="about about-three padding-120">
+					<div className="container">
+						<div className="row">
+							<div className="col-md-12 col-sm-12 col-xs-12">
+								<Table
+									headers={[
+										{ label: 'User', key: 'id' },
+										{ label: 'Points', key: 'points' },
+									]}
+									data={ this.state.data }
+									route={ ({ id }) => `/user/${id}` }
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
 			</Page>
 		);
 	}
