@@ -9,7 +9,7 @@ export default class Objective extends Component {
 	render() {
 		return (
 			<Page title="Objective">
-
+				<pre>{ JSON.stringify(this.props.data, null, 4) }</pre>
 			</Page>
 		);
 	}

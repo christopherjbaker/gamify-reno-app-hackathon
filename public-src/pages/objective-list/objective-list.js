@@ -2,6 +2,7 @@ import API from 'app-api/objective';
 
 import React, { Component } from 'react';
 import Page from 'app-components/page/page';
+import Table from 'app-components/table/table';
 
 export default class ObjectiveList extends Component {
 	constructor() {
@@ -27,7 +28,22 @@ export default class ObjectiveList extends Component {
 
 		return (
 			<Page title="Objectives">
-				<pre>{ JSON.stringify(this.state.data, null, 4) }</pre>
+				<section className="about about-three padding-120">
+					<div className="container">
+						<div className="row">
+							<div className="col-md-12 col-sm-12 col-xs-12">
+								<Table
+									headers={[
+										{ label: 'Title', key: 'title' },
+										{ label: 'Points', key: 'points' },
+									]}
+									data={ this.state.data }
+									route={ ({ id }) => `/objective/${id}` }
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
 			</Page>
 		);
 	}
