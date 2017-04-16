@@ -2,6 +2,7 @@ import styles from './objectives.scss';
 
 import React, { Component } from 'react';
 import Page from 'app-components/page/page';
+import Category from 'app-components/category/category';
 import Table from 'app-components/table/table';
 
 export default class Objectives extends Component {
@@ -34,7 +35,9 @@ export default class Objectives extends Component {
 					<div className="container">
 						<div className="row">
 							<div className="col-md-12 col-sm-12 col-xs-12">
-								<Category />
+								<Category
+									title='Performance'
+								/>
 							</div>
 						</div>
 					</div>
