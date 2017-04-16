@@ -1,7 +1,3 @@
-@mixin inset() {
-	box-shadow: 0 0 3rem #000000 inset;
-}
-
 @mixin background($size: contain, $position: 50% 50%, $repeat: no-repeat, $attachment: scroll, $color: transparent) {
 	background: $repeat $attachment $position $color;
 	background-size: $size;

@@ -1,5 +1,4 @@
 import classes from 'app-utils/classes';
-import styles from './page.scss';
 
 import React, { Component } from 'react';
 
@@ -29,12 +28,10 @@ export default class Page extends Component {
 
 	render() {
 		return (
-			<div className={ classes(styles.main, this.props.className) }>
+			<div className={ classes(this.props.className) }>
 				{ this.props.title && (
-					<section className={ styles.title }>
-						<div className="column row">
-							<h1>{ Array.isArray(this.props.title) ? this.props.title[0] : this.props.title }</h1>
-						</div>
+					<section>
+						<h1>{ Array.isArray(this.props.title) ? this.props.title[0] : this.props.title }</h1>
 					</section>
 				) }
 
