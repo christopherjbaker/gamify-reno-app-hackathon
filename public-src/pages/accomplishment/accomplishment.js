@@ -31,7 +31,6 @@ export default class Accomplishment extends Component {
 						</div>
 					</div>
 				</section>
-				<pre>{ JSON.stringify(this.props.data, null, 4) }</pre>
 			</Page>
 		);
 	}
