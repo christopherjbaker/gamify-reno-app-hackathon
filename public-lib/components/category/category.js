@@ -6,11 +6,17 @@ import React, { Component } from 'react';
 export default class Category extends Component {
 	static propTypes = {
 		title: React.PropTypes.string.isRequired,
-		color: React.PropTypes.string,
+		color: React.PropTypes.oneOf([
+			'red',
+			'blue',
+			'purple',
+			'brown',
+			'black',
+		]).isRequired,
 	};
 	render() {
 		return (
-			<section className={classes(styles.main, this.props.color, 'pricing pricing-three')}>
+			<section className={classes(styles.main, styles[this.props.color], 'pricing pricing-three')}>
 				<div>
 					<div className="container">
 						<div className="pricing-items">
