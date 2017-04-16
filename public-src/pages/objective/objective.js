@@ -51,7 +51,7 @@ export default class Objective extends Component {
 								<Lipsum count= {3 } />
 							</div>
 						</div>
-						{ this.state.accomplishments ? (
+						{ this.state.accomplishments && this.state.accomplishments.length > 0 ? (
 							<div className="row" style={{ marginBottom: '2rem' }}>
 								<div className="col-md-12 col-sm-12 col-xs-12">
 									<Table

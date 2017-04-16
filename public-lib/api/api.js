@@ -1,10 +1,10 @@
 import qs from 'querystring';
-import fetch from './_mock_fetch';
+// import fetch from './_mock_fetch';
 
 const uri = 'https://gamifyreno.azurewebsites.net';
 
 export default class API {
-	static prefix = '';
+	static prefix = '/api';
 
 	static async request(method = 'GET', url, query, body, headers = {}) {
 		method = method.toUpperCase();
@@ -81,7 +81,15 @@ export default class API {
 	static async search(path = '', query = null) {
 		let results = await this.request('GET', path, query);
 
+		if (!Array.isArray(results)) {
+			results = [];
+		}
+
 		return results.map(result => new this(result));
+	}
+
+	static getRecent() {
+		return this.search('s');
 	}
 
 	constructor(data) {

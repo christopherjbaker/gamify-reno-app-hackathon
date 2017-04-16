@@ -2,7 +2,7 @@ import API from './api';
 import Accomplishment from './accomplishment';
 
 export default class User extends API {
-	static prefix = '/User';
+	static prefix = `${ API.prefix }/User`;
 	static _cache = {};
 
 	get id() {
@@ -14,15 +14,15 @@ export default class User extends API {
 	}
 
 	get points() {
-		return this._data.userRating;
+		return this._data.userRating || 0;
 	}
 
 	get level() {
-		return this._data.userLevel || null;
+		return this._data.userLevel || 0;
 	}
 
 	getAccomplishments() {
-		return Accomplishment.byUser({
+		return Accomplishment.getByUser({
 			id: this.id,
 		});
 	}

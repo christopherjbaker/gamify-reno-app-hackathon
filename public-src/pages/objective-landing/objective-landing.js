@@ -17,7 +17,7 @@ export default class ObjectiveLanding extends Component {
 	}
 
 	async componentWillMount() {
-		let nearby = await API.search();
+		let nearby = await API.getRecent();
 
 		this.setState({ nearby });
 	}

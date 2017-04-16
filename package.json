@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean && webpack -p --progress",
     "clean": "rm -rf public/assets public/index.html public/*.js public/*.css public/*.map",
-    "watch": "webpack-dev-server -d --progress --watch --history-api-fallback --content-base public --hot --inline"
+    "watch": "webpack-dev-server -d --progress --watch --history-api-fallback --content-base public"
   },
   "dependencies": {
     "autobind-decorator": "^1.4.0",

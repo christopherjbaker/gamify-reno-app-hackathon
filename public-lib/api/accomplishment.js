@@ -3,14 +3,14 @@ import Objective from './objective';
 import User from './user';
 
 export default class Accomplishment extends API {
-	static prefix = '/Accomplishment';
+	static prefix = `${ API.prefix }/Accomplishment`;
 	static _cache = {};
 
-	static byObjective({ id: objectiveID }) {
+	static getByObjective({ id: objectiveID }) {
 		return this.search('ByObjective', { objectiveID });
 	}
 
-	static byUser({ id: userID }) {
+	static getByUser({ id: userID }) {
 		return this.search('ByUser', { userID });
 	}
 
@@ -33,11 +33,11 @@ export default class Accomplishment extends API {
 	}
 
 	get points() {
-		return this._data.points || null;
+		return this._data.points || 0;
 	}
 
 	get proof() {
-		return this._data.proof || null;
+		return this._data.proof || '';
 	}
 
 	get timestamp() {

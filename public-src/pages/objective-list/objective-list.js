@@ -14,7 +14,7 @@ export default class ObjectiveList extends Component {
 	}
 
 	async componentWillMount() {
-		let data = await API.search();
+		let data = await API.getRecent();
 
 		this.setState({ data });
 	}

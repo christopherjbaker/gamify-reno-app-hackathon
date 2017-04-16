@@ -21,7 +21,7 @@ export default class Accomplishment extends Component {
 								<div className="row" >
 									<div className="col-md-6 col-sm-12 col-xs-12">
 										<Button>Points <span className="badge">{ this.props.data.points }</span></Button>
-										<Button>Time <span className="badge">{ this.props.data.timestamp }</span></Button>
+										<Button>Time <span className="badge">{ this.props.data.timestamp.toLocaleString() }</span></Button>
 									</div>
 									<div className="col-md-6 col-sm-12 col-xs-12">
 										{ this.props.data.proof }

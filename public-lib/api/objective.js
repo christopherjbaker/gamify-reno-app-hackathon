@@ -2,11 +2,11 @@ import API from './api';
 import Accomplishment from './accomplishment';
 
 export default class Objective extends API {
-	static prefix = '/Objective';
+	static prefix = `${ API.prefix }/Objective`;
 	static _cache = {};
 
 	get id() {
-		return this._data.objectiveID;
+		return this._data.id;
 	}
 
 	get title() {
@@ -18,11 +18,11 @@ export default class Objective extends API {
 	}
 
 	get points() {
-		return this._data.basePoints || null;
+		return this._data.basePoints || 0;
 	}
 
 	get level() {
-		return this._data.level || null;
+		return this._data.level || 0;
 	}
 
 	get location() {
@@ -33,7 +33,7 @@ export default class Objective extends API {
 	}
 
 	getAccomplishments() {
-		return Accomplishment.byObjective({
+		return Accomplishment.getByObjective({
 			id: this.id,
 		});
 	}

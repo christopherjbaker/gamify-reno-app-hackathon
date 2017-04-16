@@ -12,7 +12,7 @@ export default async function mock_fetch(path, config) {
 function getData(path) {
 	let match = null;
 
-	match = path.match(/^https?:\/\/[^\/]+\/AccomplishmentById\?id=(.*)$/);
+	match = path.match(/^https?:\/\/[^\/]+\/api\/AccomplishmentById\?id=(.*)$/);
 	if (match) {
 		return {
 			accomplishmentID: match[1],
@@ -24,7 +24,7 @@ function getData(path) {
 		};
 	}
 
-	match = path.match(/^https?:\/\/[^\/]+\/Accomplishment/);
+	match = path.match(/^https?:\/\/[^\/]+\/api\/Accomplishment/);
 	if (match) {
 		return [ 'foo1', 'foo2', 'foo3' ].map((id) => ({
 			accomplishmentID: id,
@@ -36,7 +36,7 @@ function getData(path) {
 		}));
 	}
 
-	match = path.match(/^https?:\/\/[^\/]+\/ObjectiveById\?id=(.*)$/);
+	match = path.match(/^https?:\/\/[^\/]+\/api\/ObjectiveById\?id=(.*)$/);
 	if (match) {
 		return {
 			objectiveID: match[1],
@@ -51,7 +51,7 @@ function getData(path) {
 		};
 	}
 
-	match = path.match(/^https?:\/\/[^\/]+\/Objective/);
+	match = path.match(/^https?:\/\/[^\/]+\/api\/Objective/);
 	if (match) {
 		return [ 'foo1', 'foo2', 'foo3' ].map((id) => ({
 			objectiveID: id,
@@ -66,7 +66,7 @@ function getData(path) {
 		}));
 	}
 
-	match = path.match(/^https?:\/\/[^\/]+\/UserById\?id=(.*)$/);
+	match = path.match(/^https?:\/\/[^\/]+\/api\/UserById\?id=(.*)$/);
 	if (match) {
 		return {
 			userID: match[1],
@@ -76,7 +76,7 @@ function getData(path) {
 		};
 	}
 
-	match = path.match(/^https?:\/\/[^\/]+\/User/);
+	match = path.match(/^https?:\/\/[^\/]+\/api\/User/);
 	if (match) {
 		return [ 'foo1', 'foo2', 'foo3' ].map((id) => ({
 			userID: id,
