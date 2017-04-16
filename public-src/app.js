@@ -4,6 +4,7 @@ import Layout from './layout/layout';
 import Subpages from 'app-components/subpages/subpages';
 
 import Landing from './pages/landing/landing';
+import Objectives from './pages/objectives/objectives';
 
 export default class App extends Component {
 	render() {
@@ -11,6 +12,7 @@ export default class App extends Component {
 			<Layout
 				navigation={[
 					{ label: 'Home', to: '/landing' },
+					{ label: 'Objectives', to: '/objectives' },
 				]}
 			>
 				<Subpages routes={[
@@ -18,6 +20,7 @@ export default class App extends Component {
 						<Redirect to="/landing" />
 					) },
 					{ route: 'landing', Component: Landing },
+					{ route: 'objectives', Component: Objectives },
 				]} />
 			</Layout>
 		);
