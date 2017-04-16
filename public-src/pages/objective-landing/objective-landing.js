@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Page from 'app-components/page/page';
 import Category from 'app-components/category/category';
 import Table from 'app-components/table/table';
+import { Link } from 'react-router-dom';
 
 export default class ObjectiveLanding extends Component {
 	render() {
@@ -26,27 +27,40 @@ export default class ObjectiveLanding extends Component {
 										{ objective: 'Singing duet with street performer', location: 'UNR', points: '200', rating: '4.5' },
 									]}
 								/>
+								<Link to='/objectives/perform'>
+									<Category
+										color='red'
+										title='Perform'
+									/>
+								</Link>
+							
+								<Link to='/objectives/travel'>
+									<Category
+										color='blue'
+										title='Travel'
+									/>
+								</Link>
 								
-								<Category
-									color='red'
-									title='Perform'
-								/>
-								<Category
-									color='blue'
-									title='Travel'
-								/>
-								<Category
-									color='brown'
-									title='Create'
-								/>
-								<Category
-									color='purple'
-									title='Help'
-								/>
-								<Category
-									color='black'
-									title='Buy'
-								/>
+								<Link to='/objectives/create'>
+									<Category
+										color='brown'
+										title='Create'
+									/>
+								</Link>
+								
+								<Link to='/objectives/help'>
+									<Category
+										color='purple'
+										title='Help'
+									/>
+								</Link>
+								
+								<Link to='/objectives/buy'>
+									<Category
+										color='black'
+										title='Buy'
+									/>
+								</Link>
 							</div>
 						</div>
 					</div>

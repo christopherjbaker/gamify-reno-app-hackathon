@@ -2,6 +2,7 @@ import styles from './table.scss';
 import classes from 'app-utils/classes';
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Table extends Component {
 	static propTypes = {
@@ -12,6 +13,7 @@ export default class Table extends Component {
 		data: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
 		className: React.PropTypes.string,
 		title: React.PropTypes.string,
+		route: React.PropTypes.func,
 	};
 
 	render() {
@@ -30,7 +32,13 @@ export default class Table extends Component {
 						{ this.props.data.map((data) =>
 							<tr key={ data.id }>
 								{ this.props.headers.map(({ key }) =>
-									<td key={ key }>{ data[key] }</td>
+									<td key={ key }>
+										{ this.props.route ? (
+											<Link to={ this.props.route(data)}>{ data[key] }</Link>
+										) : (
+											data[key]
+										) }
+									</td>
 								) }
 							</tr>
 						) }
