@@ -510,7 +510,7 @@ input[type="submit"][disabled]:focus {
     color: #fff;
 }
 .padding-120{
-    padding: 120px 0px;
+    padding: 60px 0px;
 }
 .overlay{
     background-color: rgba(0,0,0,.6);

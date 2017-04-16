@@ -6,6 +6,14 @@ export default class Accomplishment extends API {
 	static prefix = '/Accomplishment';
 	static _cache = {};
 
+	static byObjective({ id: objectiveID }) {
+		return this.search('ByObjective', { objectiveID });
+	}
+
+	static byUser({ id: userID }) {
+		return this.search('ByUser', { userID });
+	}
+
 	get id() {
 		return this._data.accomplishmentID;
 	}

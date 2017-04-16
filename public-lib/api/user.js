@@ -1,4 +1,5 @@
 import API from './api';
+import Accomplishment from './accomplishment';
 
 export default class User extends API {
 	static prefix = '/User';
@@ -14,6 +15,12 @@ export default class User extends API {
 
 	get points() {
 		return this._data.userRating;
+	}
+
+	getAccomplishments() {
+		return Accomplishment.byUser({
+			id: this.id,
+		});
 	}
 
 	toJSON() {
