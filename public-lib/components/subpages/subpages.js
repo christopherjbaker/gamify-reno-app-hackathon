@@ -29,7 +29,7 @@ export default class Subpages extends Component {
 						render={ ({ location }) => (
 							<Redirect
 								to={{
-									pathname: `${ this.props.path }/${ this.props.index }`,
+									pathname: `${ this.props.path }${ this.props.index }`,
 									hash: location.hash,
 									search: location.search,
 									state: location.state,

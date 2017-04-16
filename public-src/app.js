@@ -8,7 +8,6 @@ import Objectives from './pages/objectives/objectives';
 import Accomplishments from './pages/accomplishments/accomplishments';
 import Community from './pages/community/community';
 
-
 export default class App extends Component {
 	render() {
 		return (
