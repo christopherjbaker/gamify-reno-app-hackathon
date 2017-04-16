@@ -5,7 +5,7 @@ export default class Objective extends Component {
 	render() {
 		return (
 			<Page title="Objective">
-				
+
 			</Page>
 		);
 	}

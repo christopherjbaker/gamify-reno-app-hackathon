@@ -1,15 +1,13 @@
 import styles from './objectives.scss';
-import classes from 'app-utils/classes';
 
 import React, { Component } from 'react';
-import Category from 'app-components/category/category';
 import Page from 'app-components/page/page';
 import Table from 'app-components/table/table';
 
 export default class Objectives extends Component {
 	render() {
 		return (
-			<Page className={ styles.main } title="Objectives">
+			<Page title="Objectives">
 				<section className="banner-three">
 					<div className="banner-overlay">
 						<div className="container">

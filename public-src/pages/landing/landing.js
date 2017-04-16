@@ -5,7 +5,7 @@ import BigNumber from 'app-components/big-number/big-number';
 export default class Landing extends Component {
 	render() {
 		return (
-			<Page >
+			<Page>
 				<section className="banner banner-seven">
 					<div className="banner-overlay">
 						<div className="container">
