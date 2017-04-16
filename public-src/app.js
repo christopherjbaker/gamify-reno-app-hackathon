@@ -4,6 +4,7 @@ import Layout from './layout/layout';
 import Subpages from 'app-components/subpages/subpages';
 
 import Landing from './pages/landing/landing';
+import Objectives from './pages/objectives/objectives';
 
 export default class App extends Component {
 	render() {
@@ -15,10 +16,12 @@ export default class App extends Component {
 						{ label: 'About 1', to: '/about/1' },
 						{ label: 'About 2', to: '/about/2' },
 					] },
+					{ label: 'Objectives', to: '/objectives' },
 				]}
 			>
 				<Subpages index="/landing" routes={[
 					{ route: 'landing', Component: Landing },
+					{ route: 'objectives', Component: Objectives },
 				]} />
 			</Layout>
 		);
