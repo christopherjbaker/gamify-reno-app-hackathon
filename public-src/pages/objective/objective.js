@@ -35,7 +35,7 @@ export default class Objective extends Component {
 								</ul>
 							</div>
 							<div className="col-md-6 col-sm-12 col-xs-12">
-								<Button className={ styles.buttonRight }>Submit</Button>
+								<Button to='/objective-submit' className={ styles.buttonRight }>Submit</Button>
 							</div>
 						</div>
 					</div>

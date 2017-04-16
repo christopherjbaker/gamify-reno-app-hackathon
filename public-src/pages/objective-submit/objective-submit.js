@@ -1,41 +1,34 @@
-import get from 'app-components/api/get/get';
-import styles from './objective.scss';
-import API from 'app-api/objective';
+import styles from './objective-submit.scss';
 
 import React, { Component } from 'react';
 import Button from 'app-components/button/button';
-import Lipsum from 'app-components/lipsum/lipsum';
 import Page from 'app-components/page/page';
-import Map from 'app-components/map/map';
 
-@get(API)
-export default class Objective extends Component {
-	static propTypes = {
-		data: React.PropTypes.object,
-	};
+export default class ObjectiveSubmit extends Component {
 	render() {
 		return (
-			<Page title="Objective">
+			<Page title="Objective Submit">
 				<section className="about about-three">
 					<div className="container">
-						<div className="row" style={{ marginBottom: '2rem' }}>
+						<div className="row" >
+							<div className="col-md-12 col-sm-12 col-xs-12" style={{ marginTop: '2rem' }}>
+								<div className="input-group input-group-lg">
+									<span className="input-group-addon" id="sizing-addon1">Description</span>
+									<input type="text" className="form-control" placeholder="Explain your submission..." aria-describedby="sizing-addon1" />
+								</div>
+							</div>
+						</div>
+						<div className="row" style={{ marginTop: '2rem' }}>
 							<div className="col-md-6 col-sm-12 col-xs-12">
-								<Map center={ this.props.data.location } zoom={ 17 } />
+								<Button style={{ float: 'right' }}>Upload Photo</Button>
 							</div>
 							<div className="col-md-6 col-sm-12 col-xs-12">
-								<Lipsum />
-								<Lipsum />
-								<Lipsum />
+								<Button>Upload Video</Button>
 							</div>
 						</div>
 						<div className="row" >
-							<div className="col-md-6 col-sm-12 col-xs-12">
-								<ul className="nav nav-pills" role="tablist">
-									<li role="presentation" className="active"><a href="#">Points <span className="badge">{ this.props.data.points }</span></a></li>
-								</ul>
-							</div>
-							<div className="col-md-6 col-sm-12 col-xs-12">
-								<Button className={ styles.buttonRight }>Submit</Button>
+							<div className="col-md-12 col-sm-12 col-xs-12" style={{ marginTop: '2rem', marginBottom: '2rem' }}>
+								<Button style={{ display: 'block', margin: '0 auto' }}>SUBMIT</Button>
 							</div>
 						</div>
 					</div>

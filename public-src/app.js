@@ -32,7 +32,7 @@ export default class App extends Component {
 					{ route: 'accomplishments', Component: AccomplishmentList, exact: true },
 					{ route: 'accomplishment/:id', Component: Accomplishment },
 					{ route: 'objectives', Component: ObjectiveLanding, exact: true },
-					{ route: 'objective', Component: ObjectiveSubmit, exact: true },
+					{ route: 'objective-submit', Component: ObjectiveSubmit, exact: true },
 					{ route: 'objectives/:category', Component: ObjectiveList },
 					{ route: 'objective/:id', Component: Objective },
 					{ route: 'users', Component: UserList, exact: true },
