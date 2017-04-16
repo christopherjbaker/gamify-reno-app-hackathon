@@ -872,6 +872,7 @@ header .menu-six .menu_cart > span:before{
     background-position: 50% 50%;
     background-size: cover;
     height: 100vh;
+    min-height: 695px;
     position: relative;
     overflow: hidden;
 }
@@ -1083,6 +1084,7 @@ header .menu-six .menu_cart > span:before{
     position: relative;
     bottom: 0;
     height: 100vh;
+    min-height: 695px;
 }
 .banner-three .content{
     position: absolute;
@@ -1212,6 +1214,7 @@ header .menu-six .menu_cart > span:before{
 }
 .banner-six .banner-six-left-bg{
     height: 100vh;
+    min-height: 695px;
     position: relative;
 }
 .banner-six .banner-six-left{
@@ -1278,6 +1281,7 @@ header .menu-six .menu_cart > span:before{
 }
 .banner-six .banner-six-right-bg{
     height: 100vh;
+    min-height: 695px;
     position: relative;
 }
 .banner-six .banner-six-right{
@@ -1332,6 +1336,7 @@ header .menu-six .menu_cart > span:before{
 }
 .banner-seven .seven-content-left{
     height: 100vh;
+    min-height: 695px;
     position: relative;
     overflow: hidden;
     max-width: 640px;
@@ -1361,6 +1366,7 @@ header .menu-six .menu_cart > span:before{
 }
 .banner-seven .seven-content-right-bg{
     height: 100vh;
+    min-height: 695px;
     position: relative;
 }
 .banner-seven .seven-content-right{
