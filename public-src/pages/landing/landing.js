@@ -17,7 +17,7 @@ export default class Landing extends Component {
 	}
 
 	async componentWillMount() {
-		let nearby = await API.search();
+		let nearby = await API.getRecent();
 
 		this.setState({ nearby });
 	}
@@ -75,7 +75,7 @@ export default class Landing extends Component {
 								</div>
 								<div className="row" style={{ paddingTop: '5rem' }}>
 									<div className="col-md-12 col-sm-12 col-xs-12">
-										{ this.state.nearby ? (
+										{ this.state.nearby && this.state.nearby.length > 0 ? (
 											<Table
 												className={ styles.nearby }
 												title="Nearby Tasks"
