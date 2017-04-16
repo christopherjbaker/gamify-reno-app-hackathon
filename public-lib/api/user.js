@@ -17,6 +17,10 @@ export default class User extends API {
 		return this._data.userRating;
 	}
 
+	get level() {
+		return this._data.userLevel || null;
+	}
+
 	getAccomplishments() {
 		return Accomplishment.byUser({
 			id: this.id,
@@ -28,6 +32,7 @@ export default class User extends API {
 			id: this.id,
 			avatar: this.avatar,
 			points: this.points,
+			level: this.level,
 		};
 	}
 }

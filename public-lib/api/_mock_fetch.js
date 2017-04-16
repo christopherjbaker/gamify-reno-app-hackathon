@@ -72,6 +72,7 @@ function getData(path) {
 			userID: match[1],
 			userPicture: `https://github.com/identicons/${ match[1] }.png`,
 			userRating: 1000,
+			userLevel: 2,
 		};
 	}
 
@@ -81,6 +82,7 @@ function getData(path) {
 			userID: id,
 			userPicture: `https://github.com/identicons/${ id }.png`,
 			userRating: 1000,
+			userLevel: 2,
 		}));
 	}
 
