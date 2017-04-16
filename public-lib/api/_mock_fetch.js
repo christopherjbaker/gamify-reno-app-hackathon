@@ -44,8 +44,8 @@ function getData(path) {
 			description: '## Foo Bar',
 			basePoints: 10,
 			location: {
-				lat: 0,
-				long: 0,
+				lat: 39.5252966,
+				long: -119.8166583,
 			},
 		}));
 	}
@@ -58,8 +58,8 @@ function getData(path) {
 			description: '## Foo Bar',
 			basePoints: 10,
 			location: {
-				lat: 0,
-				long: 0,
+				lat: 39.5252966,
+				long: -119.8166583,
 			},
 		};
 	}
