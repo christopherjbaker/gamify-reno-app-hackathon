@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Page from 'app-components/page/page';
+import BigNumber from 'app-components/big-number/big-number';
 
 export default class Landing extends Component {
 	render() {
@@ -21,28 +22,7 @@ export default class Landing extends Component {
 									<div className="col-md-6 col-sm-12 hidden-xs">
 										<div className="seven-content-right-bg">
 											<div className="seven-content-right">
-												<div className="content">
-													<span className="counter" data-count="24">24</span>
-													<p>December 2017</p>
-													<div id="clockdiv">
-														<div className="clock-item">
-															<span className="days">5</span>
-															<p className="smalltext">Days</p>
-														</div>
-														<div className="clock-item">
-															<span className="hours">4</span>
-															<p className="smalltext">Hour</p>
-														</div>
-														<div className="clock-item">
-															<span className="minutes">3</span>
-															<p className="smalltext">Minu</p>
-														</div>
-														<div className="clock-item">
-															<span className="seconds">2</span>
-															<p className="smalltext">Seco</p>
-														</div>
-													</div>
-												</div>
+												<BigNumber/>
 											</div>
 										</div>
 									</div>

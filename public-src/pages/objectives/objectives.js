@@ -13,26 +13,7 @@ export default class Landing extends Component {
 					<div className="banner-overlay">
 						<div className="container">
 							<div className="banner-content">
-								<div className="content">
-									<p>don't miss the upcoming event</p>
-									<h2>CONFERENCE 2017</h2>
-									<ul>
-										<li><span className="flaticon-tool" />24-29 December, 2017</li>
-										<li><span className="flaticon-signs" />21 King Street, Dhaka 1205, Bangladesh.</li>
-									</ul>
-								</div>{/* content */}
-								<form action="/">
-									<h3>Event registration</h3>
-									<input type="text" name="name" placeholder="Full Name" className="banner-input" />
-									<input type="text" name="email" placeholder="Email Address" className="banner-input" />
-									<input type="text" name="phone" placeholder="Phone Number" className="banner-input" />
-									<select className="banner-input">
-										<option>Basic-$100</option>
-										<option>Intermediat-$500</option>
-										<option>Advance-$1000</option>
-									</select>
-									<input type="submit" name="sumbit" defaultValue="Register Now" className="banner-submit" />
-								</form>
+								<Table />
 							</div>{/* banner content */}
 						</div>{/* container */}
 					</div>{/* overlay */}
