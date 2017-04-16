@@ -27,9 +27,9 @@ export default class Landing extends Component {
 										{ objective: 'Singing duet with street performer', location: 'UNR', points: '200', rating: '4.5' },
 									]}
 								/>
-							</div>{/* banner content */}
-						</div>{/* container */}
-					</div>{/* overlay */}
+							</div>
+						</div>
+					</div>
 				</section>
 
 				<section className="about about-three padding-120">
@@ -64,7 +64,7 @@ export default class Landing extends Component {
 								</div>
 							</div>
 						</div>
-					</div>{/* container */}
+					</div>
 				</section>
 
 				<section className="speakers speakers-three">
@@ -80,94 +80,94 @@ export default class Landing extends Component {
 										<div className="speaker-item">
 											<div className="speaker-image">
 												<img src="images/speakers/speaker_09.jpg" alt="speaker image" className="img-responsive" />
-											</div>{/* speaker-image */}
+											</div>
 											<div className="speaker-content">
 												<h4><a href="speaker-details.html">robot smith</a></h4>
 												<span>Founder</span>
-											</div>{/* speaker-content */}
-										</div>{/* speaker-item */}
+											</div>
+										</div>
 									</div>
 									<div className="col-md-3 col-sm-6 col-xs-12">
 										<div className="speaker-item">
 											<div className="speaker-image">
 												<img src="images/speakers/speaker_10.jpg" alt="speaker image" className="img-responsive" />
-											</div>{/* speaker-image */}
+											</div>
 											<div className="speaker-content">
 												<h4><a href="speaker-details.html">janaton smith</a></h4>
 												<span>Founder</span>
-											</div>{/* speaker-content */}
-										</div>{/* speaker-item */}
+											</div>
+										</div>
 									</div>
 									<div className="col-md-3 col-sm-6 col-xs-12">
 										<div className="speaker-item">
 											<div className="speaker-image">
 												<img src="images/speakers/speaker_11.jpg" alt="speaker image" className="img-responsive" />
-											</div>{/* speaker-image */}
+											</div>
 											<div className="speaker-content">
 												<h4><a href="speaker-details.html">WILLIAM JOHN</a></h4>
 												<span>Founder</span>
-											</div>{/* speaker-content */}
-										</div>{/* speaker-item */}
+											</div>
+										</div>
 									</div>
 									<div className="col-md-3 col-sm-6 col-xs-12">
 										<div className="speaker-item">
 											<div className="speaker-image">
 												<img src="images/speakers/speaker_12.jpg" alt="speaker image" className="img-responsive" />
-											</div>{/* speaker-image */}
+											</div>
 											<div className="speaker-content">
 												<h4><a href="speaker-details.html">Raisen Aero</a></h4>
 												<span>Founder</span>
-											</div>{/* speaker-content */}
-										</div>{/* speaker-item */}
+											</div>
+										</div>
 									</div>
 									<div className="col-md-3 col-sm-6 col-xs-12">
 										<div className="speaker-item">
 											<div className="speaker-image">
 												<img src="images/speakers/speaker_13.jpg" alt="speaker image" className="img-responsive" />
-											</div>{/* speaker-image */}
+											</div>
 											<div className="speaker-content">
 												<h4><a href="speaker-details.html">Raisen Aero</a></h4>
 												<span>Founder</span>
-											</div>{/* speaker-content */}
-										</div>{/* speaker-item */}
+											</div>
+										</div>
 									</div>
 									<div className="col-md-3 col-sm-6 col-xs-12">
 										<div className="speaker-item">
 											<div className="speaker-image">
 												<img src="images/speakers/speaker_14.jpg" alt="speaker image" className="img-responsive" />
-											</div>{/* speaker-image */}
+											</div>
 											<div className="speaker-content">
 												<h4><a href="speaker-details.html">robot smith</a></h4>
 												<span>Founder</span>
-											</div>{/* speaker-content */}
-										</div>{/* speaker-item */}
+											</div>
+										</div>
 									</div>
 									<div className="col-md-3 col-sm-6 col-xs-12">
 										<div className="speaker-item">
 											<div className="speaker-image">
 												<img src="images/speakers/speaker_15.jpg" alt="speaker image" className="img-responsive" />
-											</div>{/* speaker-image */}
+											</div>
 											<div className="speaker-content">
 												<h4><a href="speaker-details.html">janaton smith</a></h4>
 												<span>Founder</span>
-											</div>{/* speaker-content */}
-										</div>{/* speaker-item */}
+											</div>
+										</div>
 									</div>
 									<div className="col-md-3 col-sm-6 col-xs-12">
 										<div className="speaker-item">
 											<div className="speaker-image">
 												<img src="images/speakers/speaker_16.jpg" alt="speaker image" className="img-responsive" />
-											</div>{/* speaker-image */}
+											</div>
 											<div className="speaker-content">
 												<h4><a href="speaker-details.html">WILLIAM JOHN</a></h4>
 												<span>Founder</span>
-											</div>{/* speaker-content */}
-										</div>{/* speaker-item */}
+											</div>
+										</div>
 									</div>
-								</div>{/* row */}
-							</div>{/* speaker-items */}
-						</div>{/* container */}
-					</div>{/* overlay */}
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
 
 				<section className="schedules padding-120">
@@ -177,7 +177,7 @@ export default class Landing extends Component {
 							<p><em>Quickly harness dynamic thinking through value added models.</em></p>
 						</div>
 						<div className="schedule-tabs">
-							{/* Nav tabs */}
+
 							<ul className="nav nav-tabs" role="tablist">
 								<li role="presentation" className="active"><a href="#day-one" aria-controls="day-one" role="tab" data-toggle="tab">
 										Day-01
@@ -196,7 +196,7 @@ export default class Landing extends Component {
 										<span>29 december 2017</span>
 									</a></li>
 							</ul>
-							{/* Tab panes */}
+
 							<Table
 								headers={[
 									{ label: 'Day', key: 'day' },
@@ -207,7 +207,7 @@ export default class Landing extends Component {
 								]}
 							/>
 						</div>
-					</div>{/* container */}
+					</div>
 				</section>
 
 				<section className="pricing pricing-three">
@@ -225,7 +225,7 @@ export default class Landing extends Component {
 												<h3 className="name">Starter</h3>
 												<h2 className="amount"><sup>$</sup>150</h2>
 												<a href="#">ticket now</a>
-											</div>{/* pricing-header */}
+											</div>
 											<div className="pricing-options">
 												<div>
 													<p>Conference Tickets<span><i className="fa fa-check" aria-hidden="true" /></span></p>
@@ -235,11 +235,11 @@ export default class Landing extends Component {
 													<p>Printed Metarials<span className="off"><i className="fa fa-times" aria-hidden="true" /></span></p>
 													<p>More Options<span className="off"><i className="fa fa-times" aria-hidden="true" /></span></p>
 												</div>
-											</div>{/* pricing-options */}
+											</div>
 											<div className="pricing-button">
 												<a href="#">ticket now</a>
 											</div>
-										</div>{/* pricing item */}
+										</div>
 									</div>
 									<div className="col-md-6 col-sm-12 col-xs-12">
 										<div className="pricing-item second">
@@ -247,7 +247,7 @@ export default class Landing extends Component {
 												<h3 className="name">Personal</h3>
 												<h2 className="amount"><sup>$</sup>200</h2>
 												<a href="#">ticket now</a>
-											</div>{/* pricing-header */}
+											</div>
 											<div className="pricing-options">
 												<div>
 													<p>Conference Tickets<span><i className="fa fa-check" aria-hidden="true" /></span></p>
@@ -257,11 +257,11 @@ export default class Landing extends Component {
 													<p>Printed Metarials<span className="off"><i className="fa fa-times" aria-hidden="true" /></span></p>
 													<p>More Options<span className="off"><i className="fa fa-times" aria-hidden="true" /></span></p>
 												</div>
-											</div>{/* pricing-options */}
+											</div>
 											<div className="pricing-button">
 												<a href="#">ticket now</a>
 											</div>
-										</div>{/* pricing item */}
+										</div>
 									</div>
 									<div className="col-md-6 col-sm-12 col-xs-12">
 										<div className="pricing-item third">
@@ -269,7 +269,7 @@ export default class Landing extends Component {
 												<h3 className="name">business</h3>
 												<h2 className="amount"><sup>$</sup>300</h2>
 												<a href="#">ticket now</a>
-											</div>{/* pricing-header */}
+											</div>
 											<div className="pricing-options">
 												<div>
 													<p>Conference Tickets<span><i className="fa fa-check" aria-hidden="true" /></span></p>
@@ -279,11 +279,11 @@ export default class Landing extends Component {
 													<p>Printed Metarials<span><i className="fa fa-check" aria-hidden="true" /></span></p>
 													<p>More Options<span className="off"><i className="fa fa-times" aria-hidden="true" /></span></p>
 												</div>
-											</div>{/* pricing-options */}
+											</div>
 											<div className="pricing-button">
 												<a href="#">ticket now</a>
 											</div>
-										</div>{/* pricing item */}
+										</div>
 									</div>
 									<div className="col-md-12 col-sm-12 col-xs-12">
 										<div className="pricing-item fourth">
@@ -291,7 +291,7 @@ export default class Landing extends Component {
 												<h3 className="name">PREMIUM</h3>
 												<h2 className="amount"><sup>$</sup>500</h2>
 												<a href="#">ticket now</a>
-											</div>{/* pricing-header */}
+											</div>
 											<div className="pricing-options">
 												<div>
 													<p>Conference Tickets<span><i className="fa fa-check" aria-hidden="true" /></span></p>
@@ -301,16 +301,16 @@ export default class Landing extends Component {
 													<p>Printed Metarials<span><i className="fa fa-check" aria-hidden="true" /></span></p>
 													<p>More Options<span><i className="fa fa-check" aria-hidden="true" /></span></p>
 												</div>
-											</div>{/* pricing-options */}
+											</div>
 											<div className="pricing-button">
 												<a href="#">ticket now</a>
 											</div>
-										</div>{/* pricing item */}
+										</div>
 									</div>
-								</div>{/* row */}
-							</div>{/* pricing items */}
-						</div>{/* container */}
-					</div>{/* overlay */}
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
 
 				<section className="sponsor sponsor-two padding-120">
@@ -334,7 +334,7 @@ export default class Landing extends Component {
 									</div>
 								</div>
 							</div>
-						</div>{/* sponsor-item */}
+						</div>
 						<div className="sponsor-item">
 							<h5>Gold Sponsors</h5>
 							<div className="swiper-container sponsor-slider-two">
@@ -353,7 +353,7 @@ export default class Landing extends Component {
 									</div>
 								</div>
 							</div>
-						</div>{/* sponsor-item */}
+						</div>
 						<div className="sponsor-item">
 							<h5>Selver Sponsors</h5>
 							<div className="swiper-container sponsor-slider-three">
@@ -375,9 +375,9 @@ export default class Landing extends Component {
 									</div>
 								</div>
 							</div>
-						</div>{/* sponsor-item */}
+						</div>
 						<a href="#" className="sponsor-button default-button">become a sponsors</a>
-					</div>{/* container */}
+					</div>
 				</section>
 
 				<section className="gallery gallery-two">
@@ -395,46 +395,46 @@ export default class Landing extends Component {
 									<a href="images/gallery/gallery_07.jpg" data-rel="lightcase:myCollection">
 										<img src="images/gallery/gallery-icon.png" alt="gallery icon" className="img-responsive" />
 									</a>
-								</div>{/* gallery-item */}
+								</div>
 								<div className="gallery-item grid-item">
 									<img src="images/gallery/gallery_08.jpg" alt="gallery image" className="img-responsive" />
 									<div className="overlay" />
 									<a href="images/gallery/gallery_08.jpg" data-rel="lightcase:myCollection">
 										<img src="images/gallery/gallery-icon.png" alt="gallery icon" className="img-responsive" />
 									</a>
-								</div>{/* gallery-item */}
+								</div>
 								<div className="gallery-item grid-item">
 									<img src="images/gallery/gallery_09.jpg" alt="gallery image" className="img-responsive" />
 									<div className="overlay" />
 									<a href="images/gallery/gallery_09.jpg" data-rel="lightcase:myCollection">
 										<img src="images/gallery/gallery-icon.png" alt="gallery icon" className="img-responsive" />
 									</a>
-								</div>{/* gallery-item */}
+								</div>
 								<div className="gallery-item grid-item">
 									<img src="images/gallery/gallery_10.jpg" alt="gallery image" className="img-responsive" />
 									<div className="overlay" />
 									<a href="images/gallery/gallery_10.jpg" data-rel="lightcase:myCollection">
 										<img src="images/gallery/gallery-icon.png" alt="gallery icon" className="img-responsive" />
 									</a>
-								</div>{/* gallery-item */}
+								</div>
 								<div className="gallery-item grid-item">
 									<img src="images/gallery/gallery_11.jpg" alt="gallery image" className="img-responsive" />
 									<div className="overlay" />
 									<a href="images/gallery/gallery_11.jpg" data-rel="lightcase:myCollection">
 										<img src="images/gallery/gallery-icon.png" alt="gallery icon" className="img-responsive" />
 									</a>
-								</div>{/* gallery-item */}
+								</div>
 								<div className="gallery-item grid-item grid-item--width2">
 									<img src="images/gallery/gallery_12.jpg" alt="gallery image" className="img-responsive" />
 									<div className="overlay" />
 									<a href="images/gallery/gallery_12.jpg" data-rel="lightcase:myCollection">
 										<img src="images/gallery/gallery-icon.png" alt="gallery icon" className="img-responsive" />
 									</a>
-								</div>{/* gallery-item */}
-							</div>{/* gallery items */}
+								</div>
+							</div>
 							<a href="#" className="gallery-button default-button">lord more photos</a>
-						</div>{/* container */}
-					</div>{/* overlay */}
+						</div>
+					</div>
 				</section>
 
 				<section className="home-blog home-blog-two padding-120">
@@ -448,7 +448,7 @@ export default class Landing extends Component {
 								<div className="blog-item">
 									<div className="image">
 										<a href="single.html"><img src="images/blog/home_blog_04.jpg" alt="Blog image" className="img-responsive" /></a>
-									</div>{/* image */}
+									</div>
 									<div className="blog-content">
 										<div>
 											<ul className="post-meta">
@@ -456,22 +456,22 @@ export default class Landing extends Component {
 												<li><span className="icon flaticon-user" /><a href="#">by admin</a></li>
 												<li><span className="icon flaticon-like" /><a href="#">12 Like</a></li>
 												<li><span className="icon flaticon-chat" /><a href="#">24 Comment</a></li>
-											</ul>{/* post-meta */}
+											</ul>
 											<div className="content">
 												<h4><a href="single.html">actualze cententrc staled creative</a></h4>
 												<p>Completelly actuaze cent centric coloration and idea saharing without installed an base awesome theme of event aresources
 													creative and awesome event template.</p>
 												<a href="single.html" className="default-button">Read More</a>
-											</div>{/* content */}
+											</div>
 										</div>
-									</div>{/* blog-content */}
-								</div>{/* blog item */}
+									</div>
+								</div>
 							</div>
 							<div className="col-md-6 col-sm-12 col-xs-12">
 								<div className="blog-item">
 									<div className="image">
 										<a href="single.html"><img src="images/blog/home_blog_05.jpg" alt="Blog image" className="img-responsive" /></a>
-									</div>{/* image */}
+									</div>
 									<div className="blog-content">
 										<div>
 											<ul className="post-meta">
@@ -479,19 +479,19 @@ export default class Landing extends Component {
 												<li><span className="icon flaticon-user" /><a href="#">by admin</a></li>
 												<li><span className="icon flaticon-like" /><a href="#">12 Like</a></li>
 												<li><span className="icon flaticon-chat" /><a href="#">24 Comment</a></li>
-											</ul>{/* post-meta */}
+											</ul>
 											<div className="content">
 												<h4><a href="single.html">Competely actua cententric staled base</a></h4>
 												<p>Completelly actuaze cent centric coloration and idea saharing without installed an base awesome theme of event aresources
 													creative and awesome event template.</p>
 												<a href="single.html" className="default-button">Read More</a>
-											</div>{/* content */}
+											</div>
 										</div>
-									</div>{/* blog-content */}
-								</div>{/* blog item */}
+									</div>
+								</div>
 							</div>
-						</div>{/* row */}
-					</div>{/* container */}
+						</div>
+					</div>
 				</section>
 
 				<section className="home-map">
@@ -505,7 +505,7 @@ export default class Landing extends Component {
 							<input type="email" name="email" placeholder="Enter your e-mail here" />
 							<input type="submit" name="submit" defaultValue="Subscribe now" />
 						</form>
-					</div>{/* container */}
+					</div>
 				</section>
 			</Page>
 		);

@@ -19,15 +19,15 @@ export default class App extends Component {
 						{ label: 'About 2', to: '/about/2' },
 					] },
 					{ label: 'Objectives', to: '/objectives' },
-                    { label: 'Accomplishments', to: '/accomplishments' },
-                    { label: 'Community', to: '/community' },
+					{ label: 'Accomplishments', to: '/accomplishments' },
+					{ label: 'Community', to: '/community' },
 				]}
 			>
 				<Subpages index="/landing" routes={[
 					{ route: 'landing', Component: Landing },
 					{ route: 'objectives', Component: Objectives },
-                    { route: 'accomplishments', Component: Accomplishments},
-                    { route: 'community', Component: Community},
+					{ route: 'accomplishments', Component: Accomplishments},
+					{ route: 'community', Component: Community},
 				]} />
 			</Layout>
 		);
