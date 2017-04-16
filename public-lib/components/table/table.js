@@ -11,12 +11,14 @@ export default class Table extends Component {
 		})).isRequired,
 		data: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
 		className: React.PropTypes.string,
+		title: React.PropTypes.string,
 	};
 
 	render() {
 		return (
-			<div className={ classes('table-responsive', styles.main) }>
+			<div className={ classes('table-responsive', styles.main, this.props.className) }>
 				<table>
+					<caption>{ this.props.title }</caption>
 					<thead>
 						<tr>
 							{ this.props.headers.map(({ label, key }) =>

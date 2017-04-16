@@ -2,6 +2,7 @@ import styles from './objectives.scss';
 import classes from 'app-utils/classes';
 
 import React, { Component } from 'react';
+import Category from 'app-components/category/category';
 import Page from 'app-components/page/page';
 import Table from 'app-components/table/table';
 
@@ -9,17 +10,21 @@ export default class Landing extends Component {
 	render() {
 		return (
 			<Page className={ styles.main }>
-				<section className="banner banner-three">
+				<section className="banner-three">
 					<div className="banner-overlay">
 						<div className="container">
 							<div className="banner-content">
 								<Table
+									className={ styles.nearby }
+									title='Nearby'
 									headers={[
-										{ label: 'Day', key: 'day' },
-										{ label: 'Session', key: 'session' },
+										{ label: 'Objective', key: 'objective' },
+										{ label: 'Location', key: 'location' },
+										{ label: 'Points', key: 'points' },
+										{ label: 'Rating', key: 'rating' },
 									]}
 									data={[
-										{ day: '5', session: 'Foobar' },
+										{ objective: 'Singing duet with street performer', location: 'UNR', points: '200', rating: '4.5' },
 									]}
 								/>
 							</div>{/* banner content */}
@@ -30,7 +35,7 @@ export default class Landing extends Component {
 				<section className="about about-three padding-120">
 					<div className="container">
 						<div className="row">
-							<div className="col-md-6 col-sm-12 col-xs-12">
+							<div className="col-md-12 col-sm-12 col-xs-12">
 								<div className="image">
 									<div className="left">
 										<img src="images/about/about_02.jpg" alt="about iamge" className="img-responsive" />
@@ -280,7 +285,7 @@ export default class Landing extends Component {
 											</div>
 										</div>{/* pricing item */}
 									</div>
-									<div className="col-md-6 col-sm-12 col-xs-12">
+									<div className="col-md-12 col-sm-12 col-xs-12">
 										<div className="pricing-item fourth">
 											<div className="pricing-header">
 												<h3 className="name">PREMIUM</h3>
