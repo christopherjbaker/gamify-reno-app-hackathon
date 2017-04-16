@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Page from 'app-components/page/page';
 
-export default class Accomplishments extends Component {
+export default class AccomplishmentList extends Component {
 	render() {
 		return (
 			<Page title="Accomplishments">

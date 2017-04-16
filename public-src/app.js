@@ -5,11 +5,12 @@ import Subpages from 'app-components/subpages/subpages';
 import Community from './pages/community/community';
 import Landing from './pages/landing/landing';
 import Accomplishment from './pages/Accomplishment/Accomplishment';
-import Accomplishments from './pages/accomplishments/accomplishments';
+import AccomplishmentList from './pages/accomplishment-list/accomplishment-list';
 import Objective from './pages/objective/objective';
+import ObjectiveList from './pages/objective-list/objective-list';
 import ObjectiveLanding from './pages/objective-landing/objective-landing';
 import User from './pages/user/user';
-import Users from './pages/users/users';
+import UserList from './pages/user-list/user-list';
 
 export default class App extends Component {
 	render() {
@@ -31,12 +32,12 @@ export default class App extends Component {
 				<Subpages index="/landing" routes={[
 					{ route: 'landing', Component: Landing },
 					{ route: 'community', Component: Community },
-					{ route: 'accomplishments', Component: Accomplishments, exact: true },
+					{ route: 'accomplishments', Component: AccomplishmentList, exact: true },
 					{ route: 'accomplishment/:id', Component: Accomplishment },
-					{ route: 'objective-landing', Component: ObjectiveLanding, exact: true },
+					{ route: 'objectives', Component: ObjectiveLanding, exact: true },
 					{ route: 'objectives/:category', Component: ObjectiveList },
 					{ route: 'objective/:id', Component: Objective },
-					{ route: 'users', Component: Users, exact: true },
+					{ route: 'users', Component: UserList, exact: true },
 					{ route: 'user/:id', Component: User },
 				]} />
 			</Layout>

@@ -1,9 +1,9 @@
-import API from 'app-api/user';
+import API from 'app-api/objective';
 
 import React, { Component } from 'react';
 import Page from 'app-components/page/page';
 
-export default class Users extends Component {
+export default class ObjectiveList extends Component {
 	constructor() {
 		super();
 
@@ -21,12 +21,12 @@ export default class Users extends Component {
 	render() {
 		if (!this.state.data) {
 			return (
-				<Page title="Users" className="loading" />
+				<Page title="Objectives" className="loading" />
 			);
 		}
 
 		return (
-			<Page title="Users">
+			<Page title="Objectives">
 				<pre>{ JSON.stringify(this.state.data, null, 4) }</pre>
 			</Page>
 		);
