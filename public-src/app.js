@@ -11,12 +11,13 @@ export default class App extends Component {
 			<Layout
 				navigation={[
 					{ label: 'Home', to: '/landing' },
+					{ label: 'About', to: '/about', children: [
+						{ label: 'About 1', to: '/about/1' },
+						{ label: 'About 2', to: '/about/2' },
+					] },
 				]}
 			>
-				<Subpages routes={[
-					{ route: '', exact: true, render: () => (
-						<Redirect to="/landing" />
-					) },
+				<Subpages index="/landing" routes={[
 					{ route: 'landing', Component: Landing },
 				]} />
 			</Layout>

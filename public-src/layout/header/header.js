@@ -2,6 +2,7 @@ import styles from './header.scss';
 import classes from 'app-utils/classes';
 
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 
 export default class Layout extends Component {
 	static propTypes = {
@@ -12,10 +13,28 @@ export default class Layout extends Component {
 		className: React.PropTypes.string,
 	};
 
+	constructor() {
+		super();
+
+		this.state = {
+			fixed: false,
+		};
+
+		window.addEventListener('scroll', () => {
+			if (!this.state.fix && window.scrollY > 100) {
+				this.setState({ fixed: true });
+			}
+
+			if (this.state.fixed && window.scrollY <= 100) {
+				this.setState({ fixed: false });
+			}
+		});
+	}
+
 	render() {
 		return (
 			<header className={ classes('header-six', styles.main, this.props.className) }>
-				<nav className="main-menu menu-six menu-fixed">
+				<nav className={ classes('main-menu menu-six menu-fixed', this.state.fixed && 'menu-six-bg animated fadeInDown') }>
 					<div className="container">
 						<div className="navbar-header">
 							<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -28,52 +47,29 @@ export default class Layout extends Component {
 						</div>
 						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul className="nav navbar-nav navbar-right">
-								<li className="dropdown active">
-									<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home<span className="caret"></span></a>
-									<ul className="dropdown-menu">
-										<li className="active"><a href="index.html">Homepage Style One</a></li>
-										<li><a href="index-2.html">Homepage Style Two</a></li>
-										<li><a href="index-3.html">Homepage Style Three</a></li>
-										<li><a href="index-4.html">Homepage Style Four</a></li>
-										<li><a href="index-5.html">Homepage Style Five</a></li>
-										<li><a href="index-6.html">Homepage Style Six</a></li>
-										<li><a href="index-7.html">Homepage Style Seven</a></li>
-									</ul>
-								</li>
-								<li className="dropdown">
-									<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span className="caret"></span></a>
-									<ul className="dropdown-menu">
-										<li><a href="about.html">About Style One</a></li>
-										<li><a href="about-2.html">About Style Two</a></li>
-									</ul>
-								</li>
-								<li className="dropdown">
-									<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Speakers<span className="caret"></span></a>
-									<ul className="dropdown-menu">
-										<li><a href="speakers.html">Speakers</a></li>
-										<li><a href="speaker-details.html">Speaker Details</a></li>
-									</ul>
-								</li>
-								<li><a href="schedule.html">Schedule</a></li>
-								<li className="dropdown">
-									<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span className="caret"></span></a>
-									<ul className="dropdown-menu">
-										<li><a href="blog.html">Blog Page</a></li>
-										<li><a href="single.html">Blog Single</a></li>
-										<li><a href="ticket.html">Pricing Table</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="404.html">404 Error</a></li>
-									</ul>
-								</li>
-								<li className="dropdown">
-									<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop<span className="caret"></span></a>
-									<ul className="dropdown-menu">
-										<li><a href="product.html">Prodect Page</a></li>
-										<li><a href="product-details.html">Product Details</a></li>
-										<li><a href="shop-cart.html">Cart Page</a></li>
-									</ul>
-								</li>
-								<li><a href="ticket.html" className="menu-button">Buy Ticket</a></li>
+								{ this.props.navigation.map(({ label, to, children }) =>
+									<Route key={ to } path={ to } children={ ({ match }) =>
+										<li className={ classes(children && children.length && 'dropdown', match && 'active') }>
+											<Link to={ to }>
+												{ label }
+												{ children && children.length ? (
+													<span className="caret" />
+												) : null }
+											</Link>
+											{ children && children.length ? (
+												<ul className="dropdown-menu">
+													{ children.map(({ label, to }) =>
+														<Route key={ to } path={ to } children={ ({ match }) =>
+															<li className={ classes(match && 'active') }>
+																<Link to={ to }>{ label }</Link>
+															</li>
+														} />
+													) }
+												</ul>
+											) : null }
+										</li>
+									} />
+								) }
 							</ul>
 						</div>
 					</div>
