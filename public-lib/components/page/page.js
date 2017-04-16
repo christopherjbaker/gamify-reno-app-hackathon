@@ -30,8 +30,12 @@ export default class Page extends Component {
 		return (
 			<div className={ classes(this.props.className) }>
 				{ this.props.title && (
-					<section>
-						<h1>{ Array.isArray(this.props.title) ? this.props.title[0] : this.props.title }</h1>
+					<section className="page-header">
+						<div className="container">
+							<div className="content">
+								<h1>{ Array.isArray(this.props.title) ? this.props.title[0] : this.props.title }</h1>
+							</div>
+						</div>
 					</section>
 				) }
 

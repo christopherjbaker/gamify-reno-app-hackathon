@@ -6,6 +6,7 @@ import Subpages from 'app-components/subpages/subpages';
 import Landing from './pages/landing/landing';
 import Objectives from './pages/objectives/objectives';
 import Accomplishments from './pages/accomplishments/accomplishments';
+import Community from './pages/community/community';
 
 export default class App extends Component {
 	render() {
@@ -19,12 +20,14 @@ export default class App extends Component {
 					] },
 					{ label: 'Objectives', to: '/objectives' },
                     { label: 'Accomplishments', to: '/accomplishments' },
+                    { label: 'Community', to: '/community' },
 				]}
 			>
 				<Subpages index="/landing" routes={[
 					{ route: 'landing', Component: Landing },
 					{ route: 'objectives', Component: Objectives },
                     { route: 'accomplishments', Component: Accomplishments},
+                    { route: 'community', Component: Community},
 				]} />
 			</Layout>
 		);
