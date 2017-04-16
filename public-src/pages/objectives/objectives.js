@@ -8,12 +8,20 @@ import Table from 'app-components/table/table';
 export default class Landing extends Component {
 	render() {
 		return (
-			<Page>
+			<Page className={ styles.main }>
 				<section className="banner banner-three">
 					<div className="banner-overlay">
 						<div className="container">
 							<div className="banner-content">
-								<Table />
+								<Table
+									headers={[
+										{ label: 'Day', key: 'day' },
+										{ label: 'Session', key: 'session' },
+									]}
+									data={[
+										{ day: '5', session: 'Foobar' },
+									]}
+								/>
 							</div>{/* banner content */}
 						</div>{/* container */}
 					</div>{/* overlay */}
@@ -184,7 +192,15 @@ export default class Landing extends Component {
 									</a></li>
 							</ul>
 							{/* Tab panes */}
-							<Table />
+							<Table
+								headers={[
+									{ label: 'Day', key: 'day' },
+									{ label: 'Session', key: 'session' },
+								]}
+								data={[
+									{ day: '5', session: 'Foobar' },
+								]}
+							/>
 						</div>
 					</div>{/* container */}
 				</section>
