@@ -29,9 +29,7 @@ export default function get(API) {
 			render() {
 				if (!this.state.data) {
 					return (
-						<Page>
-							<div className="loading" />
-						</Page>
+						<Page className="loading" />
 					);
 				}
 

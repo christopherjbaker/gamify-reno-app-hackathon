@@ -78,7 +78,7 @@ export default class API {
 		return new this(result);
 	}
 
-	static async search(path, query) {
+	static async search(path = '', query = null) {
 		let results = await this.request('GET', path, query);
 
 		return results.map(result => new this(result));

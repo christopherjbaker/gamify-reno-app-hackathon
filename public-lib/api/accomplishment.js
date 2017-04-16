@@ -35,4 +35,15 @@ export default class Accomplishment extends API {
 	get timestamp() {
 		return this._data.timestamp ? new Date(this._data.timestamp) : null;
 	}
+
+	toJSON() {
+		return {
+			id: this.id,
+			objective_id: this.objective_id,
+			user_id: this.user_id,
+			points: this.points,
+			proof: this.proof,
+			timestamp: this.timestamp,
+		};
+	}
 }

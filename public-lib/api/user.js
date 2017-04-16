@@ -15,4 +15,12 @@ export default class User extends API {
 	get rating() {
 		return this._data.userRating;
 	}
+
+	toJSON() {
+		return {
+			id: this.id,
+			avatar: this.avatar,
+			rating: this.rating,
+		};
+	}
 }

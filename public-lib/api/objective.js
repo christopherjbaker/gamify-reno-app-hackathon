@@ -26,4 +26,14 @@ export default class Objective extends API {
 			lng: this._data.location.long,
 		} : null;
 	}
+
+	toJSON() {
+		return {
+			id: this.id,
+			title: this.title,
+			description: this.description,
+			points: this.points,
+			location: this.location,
+		};
+	}
 }
