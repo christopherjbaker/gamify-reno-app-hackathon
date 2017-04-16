@@ -29,7 +29,7 @@ export default class User extends Component {
 
 	render() {
 		return (
-			<Page title="User">
+			<Page title={ `User: ${ this.props.data.id }` }>
 				<section className="about about-three padding-120">
 					<div className="container">
 						<div className="row" style={{ marginBottom: '2rem' }}>

@@ -36,6 +36,7 @@ export default class UserList extends Component {
 									headers={[
 										{ label: 'User', key: 'id' },
 										{ label: 'Points', key: 'points' },
+										{ label: 'Level', key: 'level' },
 									]}
 									data={ this.state.data }
 									route={ ({ id }) => `/user/${id}` }

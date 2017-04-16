@@ -1,5 +1,6 @@
 import API from './api';
 import Accomplishment from './accomplishment';
+import md5 from 'md5';
 
 export default class User extends API {
 	static prefix = `${ API.prefix }/User`;
@@ -10,7 +11,7 @@ export default class User extends API {
 	}
 
 	get avatar() {
-		return this._data.userPicture;
+		return this._data.userPicture || `https://www.gravatar.com/avatar/${ md5(this.id) }?d=identicon&s=250`;
 	}
 
 	get points() {
@@ -18,7 +19,7 @@ export default class User extends API {
 	}
 
 	get level() {
-		return this._data.userLevel || 0;
+		return this._data.userLevel || Math.floor(Math.log(this.points / 5) / Math.log(10000 / 5) * 10);
 	}
 
 	getAccomplishments() {

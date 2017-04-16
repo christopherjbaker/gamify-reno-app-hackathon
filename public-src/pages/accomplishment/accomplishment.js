@@ -13,7 +13,7 @@ export default class Accomplishment extends Component {
 
 	render() {
 		return (
-			<Page title="Accomplishment">
+			<Page title={ `Accomplishment: ${ this.props.data.title }` }>
 				<section className="about about-three padding-120">
 					<div className="container">
 						<div className="row" style={{ marginBottom: '2rem' }}>

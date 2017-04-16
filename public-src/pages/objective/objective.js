@@ -25,13 +25,14 @@ export default class Objective extends Component {
 
 	async componentWillMount() {
 		let accomplishments = await this.props.data.getAccomplishments();
+		accomplishments = accomplishments.slice(0, 3);
 
 		this.setState({ accomplishments });
 	}
 
 	render() {
 		return (
-			<Page title="Objective">
+			<Page title={ `Objective: ${ this.props.data.title }` }>
 				<section className="about about-three padding-120">
 					<div className="container">
 						<div className="row" style={{ marginBottom: '2rem' }}>
@@ -48,7 +49,9 @@ export default class Objective extends Component {
 										<Button to="/objective-submit" className={ styles.buttonRight }>Submit</Button>
 									</div>
 								</div>
-								<Lipsum count= {3 } />
+
+								<p style={{ fontWeight: 'bold', fontSize: '150%' }}>{ this.props.data.description }</p>
+								<Lipsum count={ 2 } />
 							</div>
 						</div>
 						{ this.state.accomplishments && this.state.accomplishments.length > 0 ? (

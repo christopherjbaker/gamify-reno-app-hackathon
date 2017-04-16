@@ -18,6 +18,10 @@ export default class Accomplishment extends API {
 		return this._data.accomplishmentID;
 	}
 
+	get title() {
+		return this._data.title;
+	}
+
 	get objective_id() {
 		return this._data.objectiveID || null;
 	}

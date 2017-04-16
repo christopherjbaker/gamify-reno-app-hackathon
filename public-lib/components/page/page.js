@@ -2,13 +2,15 @@ import classes from 'app-utils/classes';
 
 import React, { Component } from 'react';
 
+const TITLE = document.title;
+
 export default class Page extends Component {
 	static setTitle(title = []) {
 		if (!Array.isArray(title)) {
 			title = [ title ];
 		}
 
-		document.title = title.length ? `${ title.filter(v => v).join(' - ') } | HMU Design` : 'HMU Design';
+		document.title = title.length ? `${ title.filter(v => v).join(' - ') } | ${ TITLE }` : TITLE;
 	}
 
 	static propTypes = {

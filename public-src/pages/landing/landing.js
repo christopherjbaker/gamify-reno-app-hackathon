@@ -18,10 +18,11 @@ export default class Landing extends Component {
 
 	async componentWillMount() {
 		let nearby = await API.getRecent();
+		nearby = nearby.slice(0, 3);
 
 		this.setState({ nearby });
 	}
-	
+
 	render() {
 		return (
 			<Page>

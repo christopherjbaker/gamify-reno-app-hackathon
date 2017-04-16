@@ -2,7 +2,6 @@ import styles from './table.scss';
 import classes from 'app-utils/classes';
 
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 export default class Table extends Component {
 	static contextTypes = {
@@ -43,11 +42,10 @@ export default class Table extends Component {
 								onClick={ this.props.route
 									? () => this.context.router.history.push(
 										this.props.route(data)
-									)
-									: null
+									) : null
 								}
 							>
-								{ this.props.headers.map(({ key }) =>
+								{ this.props.headers.map(({ key }, index) =>
 									<td key={ key }>{ data[key] }</td>
 								) }
 							</tr>
