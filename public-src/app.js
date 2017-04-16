@@ -7,6 +7,7 @@ import Landing from './pages/landing/landing';
 import Accomplishment from './pages/Accomplishment/Accomplishment';
 import AccomplishmentList from './pages/accomplishment-list/accomplishment-list';
 import Objective from './pages/objective/objective';
+import ObjectiveSubmit from './pages/objective-submit/objective-submit';
 import ObjectiveList from './pages/objective-list/objective-list';
 import ObjectiveLanding from './pages/objective-landing/objective-landing';
 import User from './pages/user/user';
@@ -31,6 +32,7 @@ export default class App extends Component {
 					{ route: 'accomplishments', Component: AccomplishmentList, exact: true },
 					{ route: 'accomplishment/:id', Component: Accomplishment },
 					{ route: 'objectives', Component: ObjectiveLanding, exact: true },
+					{ route: 'objective', Component: ObjectiveSubmit, exact: true },
 					{ route: 'objectives/:category', Component: ObjectiveList },
 					{ route: 'objective/:id', Component: Objective },
 					{ route: 'users', Component: UserList, exact: true },
