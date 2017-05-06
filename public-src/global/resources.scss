@@ -3,7 +3,7 @@
 	background-size: $size;
 }
 
-@mixin clamp($count: 1) {
+@mixin clamp($count: 1, $line-height: 1.5em) {
 	overflow: hidden;
 	text-overflow: ellipsis;
 
@@ -11,7 +11,7 @@
 		white-space: nowrap;
 	}
 	@else {
-		max-height: 1.5em * $count;
+		max-height: $line-height * $count;
 		display: -webkit-box;
 		-webkit-line-clamp: $count;
 		-webkit-box-orient: vertical;
